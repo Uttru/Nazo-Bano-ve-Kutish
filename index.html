@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07142d">
+  <title>Nazo Bano ve Kutişin' Kavuşma Ajandası ♡</title>
+  <style>
+    :root{--night:#061126;--navy:#0b1d3c;--blue:#173e67;--ice:#d9e9ff;--pink:#ffb8d1;--gold:#f8dfad}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--night);color:#f8f7ff;font-family:Georgia,'Times New Roman',serif}
+    body{overflow-x:hidden}
+    button{font:inherit;cursor:pointer}
+    .screen{min-height:100svh;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 78%,#1d4770 0%,#10284b 32%,#091832 63%,#040b19 100%)}
+    .stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";pointer-events:none;background-image:radial-gradient(1px 1px at 7% 16%,#fff 98%,transparent),radial-gradient(2px 2px at 22% 29%,#d8eaff 98%,transparent),radial-gradient(1px 1px at 36% 9%,#fff 98%,transparent),radial-gradient(1px 1px at 52% 24%,#fff 98%,transparent),radial-gradient(2px 2px at 68% 13%,#fff 98%,transparent),radial-gradient(1px 1px at 79% 31%,#d8eaff 98%,transparent),radial-gradient(1px 1px at 92% 12%,#fff 98%,transparent),radial-gradient(1px 1px at 14% 47%,#fff 98%,transparent),radial-gradient(1px 1px at 87% 48%,#fff 98%,transparent);background-size:100% 100%;animation:twinkle 5s ease-in-out infinite alternate}
+    .stars:before{opacity:.45;transform:translateY(20px);animation-delay:-2s;background-size:83% 88%}.stars:after{opacity:.4;transform:translateX(20px);animation-delay:-4s;background-size:67% 95%}
+    @keyframes twinkle{from{opacity:.35}to{opacity:1}}
+    .moon{position:absolute;right:12%;top:9%;width:clamp(64px,8vw,100px);aspect-ratio:1;border-radius:50%;background:#f4f0dc;box-shadow:0 0 25px #d7e8ff80,0 0 75px #9bc8ff36;z-index:2;transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
+    .moon-face{position:absolute;inset:0;display:block;transition:transform .3s ease}
+    .moon-eye{position:absolute;top:38%;width:6px;height:9px;border-radius:50%;background:#25304a;transition:all .25s ease}
+    .moon-eye.left{left:31%}.moon-eye.right{right:31%}
+    .moon-mouth{position:absolute;left:50%;top:55%;width:15px;height:2.5px;background:#25304a;border-radius:3px;transform:translateX(-50%);transition:all .25s ease}
+    /* Ay normal hâlinde nötr; yalnızca fareyle üzerine gelince gülümser. */
+    .moon:hover .moon-mouth{width:24px;height:13px;background:transparent;border-bottom:3px solid #25304a;border-radius:0 0 20px 20px;top:51%}
+    .moon:focus-visible{outline:2px solid #fff;outline-offset:5px}
+    .intro{position:relative;z-index:3;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:clamp(48px,9vh,100px) 20px 300px}
+    .eyebrow{font:600 11px/1.5 Arial,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#d3e6ffb8}
+    h1{font-size:clamp(2.7rem,8vw,6.5rem);line-height:.98;letter-spacing:-.045em;font-weight:normal;margin:22px 0 18px;text-shadow:0 5px 40px #83b8ff2c}
+    h1 em{color:var(--pink);font-weight:normal}
+    .intro p{max-width:530px;font-size:clamp(1rem,2.3vw,1.25rem);line-height:1.7;color:#d8e5f6;margin:0 auto 27px}
+    .intro .subtitle{font-style:italic;letter-spacing:.04em;color:#d9e6f7;font-size:clamp(.95rem,2vw,1.15rem);text-shadow:0 0 22px #b8d5ff25}
+    .date-pill{border:1px solid #d5e6ff55;border-radius:999px;padding:10px 18px;color:#f5e8d0;font:12px Arial,sans-serif;letter-spacing:.13em;background:#ffffff08;backdrop-filter:blur(8px)}
+    .countdown{display:flex;gap:clamp(8px,2vw,16px);margin:22px 0 0;justify-content:center}
+    .countdown div{min-width:clamp(58px,12vw,88px);padding:12px 8px 10px;border:1px solid #d5e6ff35;border-radius:14px;background:#ffffff09;backdrop-filter:blur(8px);display:flex;flex-direction:column;gap:5px;box-shadow:inset 0 1px #ffffff08}
+    .countdown strong{font:500 clamp(1.35rem,4vw,2.1rem)/1 Arial,sans-serif;color:#fff0f6;font-variant-numeric:tabular-nums}
+    .countdown span{font:9px Arial,sans-serif;letter-spacing:.12em;color:#c7d9ef}
+    .primary,.secondary{border:0;border-radius:999px;padding:14px 23px;transition:transform .25s,background .25s;letter-spacing:.02em}
+    .primary{margin-top:25px;background:linear-gradient(120deg,#f7c4d8,#f7e6bd);color:#17233e;box-shadow:0 8px 35px #ffbad52b;font-size:15px}
+    .primary:hover,.secondary:hover{transform:translateY(-2px)}
+    .intro-actions{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap}.intro-actions .primary{margin-top:25px;min-width:190px}.intro-actions button{min-height:48px}
+    .memory-video-frame{width:min(100%,560px);max-height:72svh;aspect-ratio:9/16;margin:0 auto;border:1px solid #d8e9ff35;border-radius:24px;overflow:hidden;background:#030914;box-shadow:0 24px 70px #0006}
+    .memory-video-frame video{display:block;width:100%;height:100%;max-height:72svh;object-fit:contain;background:#030914}
+    .memories-copy{text-align:center;max-width:600px;margin:0 auto 24px;color:#c8d8ef;line-height:1.8}
+    .memory-actions{display:flex;justify-content:center;gap:12px;margin-top:24px;flex-wrap:wrap}
+    .sea{position:absolute;z-index:1;bottom:0;left:0;width:100%;height:32%;min-height:190px;background:linear-gradient(180deg,#173f66 0%,#0c2c50 38%,#06152d 100%);overflow:hidden;border-top:1px solid #a9d5ff24}
+    .sea:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#d4eaff0c,transparent 45%),repeating-linear-gradient(177deg,transparent 0 21px,#a6d6ff0c 22px 23px,transparent 24px 42px);animation:water 8s linear infinite}
+    @keyframes water{to{background-position:0 100px}}
+    .wave{position:absolute;left:-10%;width:120%;height:90px;top:-25px;border-radius:48% 52% 0 0;background:#6ea8d31d;animation:wave 8s ease-in-out infinite alternate}
+    .wave.w2{top:12px;left:-20%;opacity:.7;animation-duration:11s;animation-direction:alternate-reverse}
+    @keyframes wave{from{transform:translateX(-2%) rotate(-1deg)}to{transform:translateX(3%) rotate(1deg)}}
+    .ship-wrap{position:absolute;z-index:2;bottom:20%;left:-230px;width:220px;animation:sail 18s linear infinite}
+    @keyframes sail{0%{left:-230px;transform:translateY(0)}25%{transform:translateY(-7px)}50%{transform:translateY(2px)}75%{transform:translateY(-5px)}100%{left:calc(100% + 230px);transform:translateY(0)}}
+    .ship{width:100%;filter:drop-shadow(0 8px 14px #02071170)}
+    .horizon-glow{position:absolute;bottom:0;left:15%;width:70%;height:90px;background:#71b9ef14;filter:blur(28px)}
+    .music{position:fixed;z-index:20;right:18px;bottom:18px;border:2px solid #fff0f7;background:linear-gradient(135deg,#ffb8d1,#f7e6bd);color:#17233e;border-radius:999px;padding:15px 22px;font:700 14px Arial,sans-serif;backdrop-filter:blur(12px);box-shadow:0 0 0 5px #ffbad52b,0 10px 35px #0008;transition:transform .2s ease,box-shadow .2s ease;animation:musicPulse 2.8s ease-in-out infinite}
+    .music:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 0 0 7px #ffbad53d,0 14px 40px #0009}
+    .music.playing{border-color:#fff;color:#fff;background:linear-gradient(135deg,#9d5279,#304f83);box-shadow:0 0 0 5px #ffc3d833,0 10px 35px #0008;animation:none}
+    @keyframes musicPulse{0%,100%{box-shadow:0 0 0 4px #ffbad526,0 10px 35px #0008}50%{box-shadow:0 0 0 8px #ffbad53b,0 10px 35px #0008}}
+    .content-screen{display:none;min-height:100svh;padding:50px 18px 95px;position:relative;background:radial-gradient(ellipse at 50% 0%,#17365c 0%,#091832 55%,#040b19 100%)}
+    .content-screen.show{display:block;animation:screenIn .75s both}
+    @keyframes screenIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .content-head{text-align:center;max-width:650px;margin:0 auto 28px;position:relative;z-index:1}
+    .content-head h2{font-size:clamp(2.2rem,7vw,4.2rem);font-weight:normal;margin:12px 0;color:#fff0f6}
+    .content-head p{color:#c4d6ef;line-height:1.7}
+    .counter{font:11px Arial,sans-serif;letter-spacing:.18em;color:#c1d8f5}
+    .memory-card{position:relative;z-index:1;width:min(100%,780px);margin:0 auto;border:1px solid #d8e9ff29;background:linear-gradient(145deg,#ffffff0e,#ffffff04);border-radius:28px;padding:clamp(16px,4vw,30px);box-shadow:0 25px 80px #0003;backdrop-filter:blur(12px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(16px,3vw,30px);align-items:center;animation:cardIn .55s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes cardIn{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .media-frame{width:100%;aspect-ratio:4/5;max-height:450px;overflow:hidden;border-radius:19px;background:#0a1222;box-shadow:0 12px 32px #0004}
+    .media-frame img,.media-frame video{width:100%;height:100%;object-fit:contain;display:block;background:#0a1222}
+    .memory-copy{padding:10px 8px}
+    .memory-copy .number{font:11px Arial,sans-serif;letter-spacing:.2em;color:#f4b9d0}
+    .memory-copy h3{font-size:clamp(2rem,5vw,3.4rem);font-weight:normal;line-height:1.05;margin:14px 0 18px;color:#fff5f8}
+    .memory-copy p{color:#c5d4e9;line-height:1.75;font-size:15px}
+    .nav-row{display:flex;align-items:center;justify-content:center;gap:13px;margin:25px auto 0;position:relative;z-index:1}
+    .secondary{border:1px solid #d3e5ff40;background:#ffffff0a;color:#f7f1fa;padding:12px 19px}
+    .secondary:disabled{opacity:.35;cursor:not-allowed}
+    .dots{display:flex;gap:6px;justify-content:center;margin:22px auto 0;position:relative;z-index:1}
+    .dot{width:7px;height:7px;border-radius:99px;border:0;padding:0;background:#b5c9e34d;transition:all .3s}
+    .dot.active{width:23px;background:#ffc3d8}
+    .footer-note{text-align:center;color:#9fb5d3;font:11px Arial,sans-serif;letter-spacing:.12em;margin-top:35px}
+    .finale{display:none;text-align:center;max-width:650px;margin:30px auto 0;color:#f7d8e5;line-height:1.9}
+    .finale.show{display:block;animation:screenIn .8s both}
+    @media(max-width:600px){.intro{padding-top:78px;padding-bottom:220px}.moon{right:8%;top:5%}.sea{height:28%;min-height:175px}.ship-wrap{bottom:24%;width:175px}.countdown{gap:6px;margin-top:16px}.countdown div{min-width:0;width:21vw;padding:10px 4px 8px;border-radius:11px}.countdown span{font-size:8px;letter-spacing:.05em}.memory-card{grid-template-columns:1fr;max-width:440px;gap:17px}.media-frame{aspect-ratio:16/10;max-height:290px}.memory-copy{text-align:center;padding:4px 6px 8px}.memory-copy h3{margin:9px 0 10px}.memory-copy p{margin:0;font-size:14px}.content-screen{padding-top:38px}.music{right:10px;bottom:10px;padding:14px 18px;font-size:13px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="screen" id="introScreen" aria-label="Kavuşma yolculuğu açılışı">
+      <div class="stars"></div><div class="moon" tabindex="0" role="img" aria-label="Üzerine gelince gülümseyen ay"><span class="moon-face"><span class="moon-eye left"></span><span class="moon-eye right"></span><span class="moon-mouth"></span></span></div>
+      <div class="intro">
+        <div class="eyebrow">BİZİM HİKÂYEMİZ</div>
+        <h1>Nazo Bano ve<br><em>Kutişin'</em><br>kavuşma ajandası</h1>
+        <p class="subtitle">watery eyes and silent convos...</p>
+        <div class="date-pill">♡ &nbsp; 16 ARALIK 2026 · 00.00 &nbsp; ♡</div>
+        <div class="countdown" aria-label="Kavuşmaya kalan süre">
+          <div><strong id="days">00</strong><span>GÜN</span></div>
+          <div><strong id="hours">00</strong><span>SAAT</span></div>
+          <div><strong id="minutes">00</strong><span>DAKİKA</span></div>
+          <div><strong id="seconds">00</strong><span>SANİYE</span></div>
+        </div>
+        <div class="intro-actions"><button class="primary" id="startBtn">Yolculuğa başla&nbsp; ✦</button><button class="primary" id="introMemoriesBtn">Ne konuşuldu&nbsp; ?</button></div>
+      </div>
+      <div class="sea"><div class="horizon-glow"></div><div class="wave"></div><div class="wave w2"></div>
+        <div class="ship-wrap" aria-hidden="true"><svg class="ship" viewBox="0 0 240 145" xmlns="http://www.w3.org/2000/svg"><path d="M20 103 Q120 118 218 101 L196 132 Q120 143 48 130Z" fill="#1d2434" stroke="#d9e9ff" stroke-opacity=".5" stroke-width="2"/><path d="M112 20 L112 101 L174 101Z" fill="#f4e8d6"/><path d="M103 38 L103 101 L58 101Z" fill="#e3d6c5"/><path d="M120 13 L120 101" stroke="#f8f0e2" stroke-width="5"/><path d="M120 13 L174 101 L120 101Z" fill="#d7b6a7"/><path d="M49 101 L202 101" stroke="#d8e8f9" stroke-width="3"/><path d="M31 135 Q58 128 84 136 T138 136 T194 136 T231 134" fill="none" stroke="#a8d8f8" stroke-opacity=".7" stroke-width="2"/></svg></div>
+      </div>
+    </section>
+
+    <section class="content-screen" id="thingsScreen" aria-label="Sevdiğim on şey">
+      <div class="stars"></div>
+      <header class="content-head"><div class="eyebrow">SANA DAİR KÜÇÜK ŞEYLER</div><h2>Sevdiğim 10 şey <span style="color:#ffb8d1">♡</span></h2><p>Her birinin ayrı bir yeri var. Bir sonrakini görmek için tıkla.</p></header>
+      <div class="counter" id="counter" style="text-align:center;margin-bottom:14px">01 / 10</div>
+      <article class="memory-card" id="memoryCard" aria-live="polite">
+        <div class="media-frame" id="mediaFrame"><img id="memoryImage" src="assets/thing-1.png" alt=""></div>
+        <div class="memory-copy"><div class="number" id="memoryNumber">NO. 01</div><h3 id="memoryTitle"></h3><p id="memoryDescription"></p></div>
+      </article>
+      <div class="nav-row"><button class="secondary" id="prevBtn">← Önceki</button><button class="primary" id="nextBtn" style="margin:0">Sonraki&nbsp; →</button></div>
+      <div class="dots" id="dots" aria-label="Slayt seçimi"></div>
+      <div class="finale" id="finale">Ve listede olmayan daha binlerce şey var…<br><strong>Hepsini sana kavuşunca anlatacağım. ♡</strong></div>
+      <div class="memory-actions"><button class="primary" id="thingsMemoriesBtn" style="margin:0">Ne konuşuldu&nbsp; ?</button></div>
+      <div class="footer-note">BİR DENİZ, BİR GEMİ, BİR SÜRÜ SEBEP: SEN</div>
+    </section>
+
+    <section class="content-screen" id="memoriesScreen" aria-label="Ne konuşuldu?">
+      <div class="stars"></div>
+      <header class="content-head"><div class="eyebrow">BİZDEN KALAN KÜÇÜK BİR PARÇA</div><h2>Ne konuşuldu <span style="color:#ffb8d1">?</span></h2><p>Bir gün dönüp baktığımızda, yine gülümsemek için.</p></header>
+      <p class="memories-copy">Bu video sessiz oynatılır; arkadaki <em>Sailor Song</em> kesilmeden devam eder. ♡</p>
+      <div class="memory-video-frame"><video id="memoriesVideo" src="assets/ne-konusuldu.mp4" poster="assets/ne-konusuldu-poster.jpg" controls muted playsinline preload="metadata" aria-label="Ne konuşuldu videosu"></video></div>
+      <div class="memory-actions"><button class="secondary" id="memoriesBackBtn">← Geri dön</button><button class="primary" id="memoriesThingsBtn" style="margin:0">Sevdiğim 10 şey&nbsp; ♡</button></div>
+    </section>
+  </main>
+  <button class="music" id="musicBtn" aria-pressed="false">♫ Müziği aç</button>
+  <audio id="song" src="assets/sailor-song.mp3" preload="auto" loop></audio>
+  <script>
+    // Türkiye saati: 16 Aralık 2026, 00.00 (UTC+03:00)
+    const targetDate = new Date('2026-12-16T00:00:00+03:00').getTime();
+    function updateCountdown(){
+      let remaining = Math.max(0, targetDate - Date.now());
+      const day = Math.floor(remaining / 86400000); remaining %= 86400000;
+      const hour = Math.floor(remaining / 3600000); remaining %= 3600000;
+      const minute = Math.floor(remaining / 60000); remaining %= 60000;
+      const second = Math.floor(remaining / 1000);
+      document.getElementById('days').textContent = String(day).padStart(2,'0');
+      document.getElementById('hours').textContent = String(hour).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minute).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(second).padStart(2,'0');
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+
+    const items = [
+      {title:"", description:"", image:"assets/thing-1.png", alt:""},
+      {title:"Fındığım", description:"", image:"assets/thing-2.webp", alt:"Fındıklar"},
+      {title:"Karın kasların", description:"", image:"assets/thing-3.png", alt:"Ayna karşısında kaslı bir görünüm"},
+      {title:"Multiple personality'in", description:"", image:"assets/thing-4.jpg", alt:"Aynı kişinin farklı kareleri"},
+      {title:"Bu küçük canavar", description:"", image:"assets/thing-5.jpg", alt:"Sevimli mavi küçük canavar"},
+      {title:"Bu kitap", description:"", image:"assets/thing-6.jpg", alt:"Kendini Aslan Sanan Şola kitabı"},
+      {title:"Öğretmenim", description:"", image:"assets/thing-7.jpeg", alt:"Evde esneme yapan kişi"},
+      {title:"Pasaklı insanlar", description:"", image:"assets/thing-8.png", alt:"Dağınık oda"},
+      {title:"Leoparlar", description:"", video:"assets/thing-9.mp4", alt:"Leopar deseninin yakın çekimi"},
+      {title:"", description:"", image:"assets/thing-10.png", alt:""}
+    ];
+    const introScreen=document.getElementById('introScreen');
+    const thingsScreen=document.getElementById('thingsScreen');
+    const memoriesScreen=document.getElementById('memoriesScreen');
+    const memoriesVideo=document.getElementById('memoriesVideo');
+    let memoriesReturnTo='intro';
+    const memoryCard=document.getElementById('memoryCard');
+    const mediaFrame=document.getElementById('mediaFrame');
+    const titleEl=document.getElementById('memoryTitle');
+    const descEl=document.getElementById('memoryDescription');
+    const numEl=document.getElementById('memoryNumber');
+    const counterEl=document.getElementById('counter');
+    const prevBtn=document.getElementById('prevBtn');
+    const nextBtn=document.getElementById('nextBtn');
+    const finale=document.getElementById('finale');
+    const dotsEl=document.getElementById('dots');
+    let current=0;
+
+    items.forEach((item,i)=>{
+      const dot=document.createElement('button'); dot.className='dot'; dot.setAttribute('aria-label',`Madde ${i+1}`); dot.addEventListener('click',()=>showItem(i)); dotsEl.appendChild(dot);
+    });
+    function showItem(index){
+      current=Math.max(0,Math.min(items.length-1,index));
+      const item=items[current];
+      memoryCard.style.animation='none'; void memoryCard.offsetWidth; memoryCard.style.animation='cardIn .55s cubic-bezier(.2,.8,.2,1) both';
+      mediaFrame.innerHTML='';
+      if(item.video){const v=document.createElement('video');v.src=item.video;v.poster='assets/video9-preview.jpg';v.autoplay=true;v.loop=true;v.muted=true;v.playsInline=true;v.controls=true;v.preload='metadata';v.setAttribute('aria-label',item.alt);v.addEventListener('error',()=>{const fallback=document.createElement('img');fallback.src='assets/video9-preview.jpg';fallback.alt=item.alt;fallback.className='media-fallback';mediaFrame.replaceChildren(fallback)});mediaFrame.appendChild(v)}
+      else {const img=document.createElement('img');img.src=item.image;img.alt=item.alt;img.loading='eager';img.addEventListener('error',()=>{img.removeAttribute('src');img.alt='Görsel yüklenemedi. ZIP dosyasını tamamen ayıklayıp index.html dosyasını assets klasörüyle birlikte aç.';img.className='media-fallback';img.style.objectFit='contain';img.style.padding='24px';img.style.background='rgba(255,255,255,.06)';img.src='assets/video9-preview.jpg'});mediaFrame.appendChild(img)}
+      titleEl.textContent=item.title; descEl.textContent=item.description;
+      titleEl.style.display=item.title?'block':'none'; descEl.style.display=item.description?'block':'none';
+      numEl.textContent=`NO. ${String(current+1).padStart(2,'0')}`;
+      counterEl.textContent=`${String(current+1).padStart(2,'0')} / 10`;
+      prevBtn.disabled=current===0; nextBtn.textContent=current===items.length-1?'Baştan gör ↻':'Sonraki  →';
+      [...dotsEl.children].forEach((d,i)=>d.classList.toggle('active',i===current));
+      finale.classList.toggle('show',current===items.length-1);
+    }
+    function openThings(){memoriesVideo.pause();mediaFrame.querySelectorAll('video').forEach(v=>v.pause());introScreen.style.display='none';memoriesScreen.classList.remove('show');thingsScreen.classList.add('show');showItem(0);window.scrollTo({top:0,behavior:'smooth'});}
+    function openMemories(from){memoriesReturnTo=from;mediaFrame.querySelectorAll('video').forEach(v=>v.pause());introScreen.style.display='none';thingsScreen.classList.remove('show');memoriesScreen.classList.add('show');memoriesVideo.muted=true;memoriesVideo.volume=0;window.scrollTo({top:0,behavior:'smooth'});}
+    function closeMemories(){memoriesScreen.classList.remove('show');memoriesVideo.pause();if(memoriesReturnTo==='things'){thingsScreen.classList.add('show');}else{introScreen.style.display='';}window.scrollTo({top:0,behavior:'smooth'});}
+    document.getElementById('startBtn').addEventListener('click',openThings);
+    document.getElementById('introMemoriesBtn').addEventListener('click',()=>openMemories('intro'));
+    document.getElementById('thingsMemoriesBtn').addEventListener('click',()=>openMemories('things'));
+    document.getElementById('memoriesBackBtn').addEventListener('click',closeMemories);
+    document.getElementById('memoriesThingsBtn').addEventListener('click',openThings);
+    prevBtn.addEventListener('click',()=>showItem(current-1));
+    nextBtn.addEventListener('click',()=>showItem(current===items.length-1?0:current+1));
+    document.addEventListener('keydown',e=>{if(!thingsScreen.classList.contains('show'))return;if(e.key==='ArrowRight')showItem(current===9?0:current+1);if(e.key==='ArrowLeft')showItem(current-1)});
+    // Video tamamen sessiz; ses yalnızca arka plan şarkısından gelir.
+    memoriesVideo.muted=true; memoriesVideo.volume=0;
+
+    const song=document.getElementById('song'); const musicBtn=document.getElementById('musicBtn');
+    musicBtn.addEventListener('click',async()=>{
+      if(song.paused){try{await song.play();musicBtn.textContent='♫ Müziği kapat';musicBtn.classList.add('playing');musicBtn.setAttribute('aria-pressed','true')}catch(err){musicBtn.textContent='Müzik açılamadı — MP3 dosyasını kontrol et';musicBtn.classList.remove('playing');console.error('Müzik başlatılamadı:',err)}}
+      else{song.pause();musicBtn.textContent='♫ Müziği aç';musicBtn.classList.remove('playing');musicBtn.setAttribute('aria-pressed','false')}
+    });
+    song.addEventListener('error',()=>{musicBtn.title='assets/sailor-song.mp3 dosyasının index.html ile birlikte assets klasöründe bulunduğundan emin ol.'});
+    showItem(0);
+  </script>
+</body>
+</html>
